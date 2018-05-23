@@ -7,6 +7,12 @@ import App from './App'
 {{#router}}
 import router from './router'
 {{/router}}
+{{#mobile}}
+import 'lib-flexible'
+{{/mobile}}
+{{#axios}}
+import http from '@/utils/http.js'
+{{/axios}}
 
 {{#vuex}}  //vuex为true的时候就会写入这些
 import Vuex from 'vuex'
@@ -15,7 +21,9 @@ Vue.use(Vuex)
 {{/vuex}}
 
 Vue.config.productionTip = false
-
+{{#axios}}
+Vue.prototype.$http = http
+{{/axios}}
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
