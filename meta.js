@@ -74,6 +74,21 @@ module.exports = {
       type: 'confirm',
       message: 'Install vue-router?',
     },
+    mobile: {
+      when: 'isNotTest',
+      type: 'confirm',
+      message: 'Install lib-flexible px2rem-loader?'
+    },
+    less:{
+      when: 'isNotTest',
+      type: 'confirm',
+      message: 'Install less less-loader?'
+    },
+    axios:{
+      when: 'isNotTest',
+      type: 'confirm',
+      message: 'Install axios?'
+    },
     lint: {
       when: 'isNotTest',
       type: 'confirm',
@@ -170,6 +185,7 @@ module.exports = {
     'test/unit/setup.js': "unit && runner === 'jest'",
     'test/e2e/**/*': 'e2e',
     'src/router/**/*': 'router',
+    'src/store/**/*': 'vuex',
   },
   complete: function(data, { chalk }) {
     const green = chalk.green

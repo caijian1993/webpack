@@ -26,9 +26,19 @@
   },
   "dependencies": {
     "vue": "^2.5.2"{{#router}},
-    "vue-router": "^3.0.1"{{/router}}
+    "vue-router": "^3.0.1"{{/router}}{{#vuex}},
+    "vuex": "^3.0.1"{{/vuex}}{{#axios}},
+    "axios": "^0.18.0"{{/axios}}{{#mobile}},
+    "lib-flexible": "^0.3.2"{{/mobile}}
   },
   "devDependencies": {
+    {{#mobile}}
+    "px2rem-loader": "^0.1.7",
+    {{/mobile}}
+    {{#less}}
+    "less": "^2.7.3",
+    "less-loader": "^4.0.5",
+    {{/less}}
     {{#lint}}
     "babel-eslint": "^7.2.3",
     "eslint": "^4.15.0",
