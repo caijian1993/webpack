@@ -4,7 +4,7 @@ import axios from 'axios'
 import router from '@/router'
 
 const service = axios.create({
-    baseURL:apiUrl.baseUrl,
+    baseURL:'',
     timeout:5000,
 })
 //添加请求拦截器
