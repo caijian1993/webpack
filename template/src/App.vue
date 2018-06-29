@@ -34,9 +34,6 @@ body,html{
   -webkit-overflow-scrolling: touch;
   {{/mobile}}
 }
-img{
-  pointer-events: none; 
-}
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
